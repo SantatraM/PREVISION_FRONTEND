@@ -14,9 +14,11 @@
                 <tr v-for="sousBassin in paginatedData" :key="sousBassin.idsousbassin">
                     <td class="py-1"> {{ sousBassin.sousbassin }} </td>
                     <td> 
-                        <button type="button" class="btn btn-social-icon btn-twitter" style="width: 30px; height: 30px;">
-                            <i class="mdi mdi-pencil"></i>
-                        </button>
+                        <RouterLink :to="{ name: 'modificationSousBassin', params: { idsousbassin: sousBassin.idsousbassin } }">
+                            <button type="button" class="btn btn-social-icon btn-twitter" style="width: 30px; height: 30px;">
+                                <i class="mdi mdi-pencil"></i>
+                            </button>
+                        </RouterLink>
                     </td>
                 </tr>
             </tbody>
