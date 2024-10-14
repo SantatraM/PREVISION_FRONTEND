@@ -7,12 +7,7 @@
                 <div class="content-wrapper">
                     <div class="page-header">
                         <h3 class="page-title"> Inserer un nouveau station </h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Form elements</li>
-                            </ol>
-                        </nav>
+                        <button @click="goBack" class="btn btn-gradient-primary btn-sm">Retour</button>
                     </div>
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">
@@ -22,14 +17,6 @@
                                     <div class="form-group">
                                         <label for="exampleInputName1">Site</label>
                                         <input type="text" class="form-control" id="exampleInputName1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputName1">longitude</label>
-                                        <input type="number" class="form-control" id="exampleInputName1">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="exampleInputName1">latitude</label>
-                                        <input type="number" class="form-control" id="exampleInputName1">
                                     </div>
                                     <div class="form-group">
                                         <label for="exampleSelectGender">sous bassin</label>
@@ -45,7 +32,19 @@
                                         <option>Female</option>
                                         </select>
                                     </div>
-                                  <button type="submit" class="btn btn-gradient-primary me-2">Submit</button>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">longitude</label>
+                                        <input type="number" class="form-control" id="exampleInputName1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">latitude</label>
+                                        <input type="number" class="form-control" id="exampleInputName1">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputName1">Code</label>
+                                        <input type="text" class="form-control" id="exampleInputName1">
+                                    </div>
+                                  <button type="submit" class="btn btn-gradient-primary me-2">Inserer</button>
                                 </form>
                               </div>
                             </div>
@@ -65,6 +64,11 @@
             name: 'insertionStation',
             components: {
                 Menu,
+            },
+            methods: {
+                goBack() {
+                    this.$router.go(-1);
+                }
             }
         };
     </script>

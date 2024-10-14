@@ -1,7 +1,7 @@
 <template>
     <div class="card-body">
         <p>
-            <button type="button" class="btn btn-gradient-primary btn-sm">Inserer un nouveu mesure</button>
+            <RouterLink to="insert-mesure" class="btn btn-gradient-primary btn-sm">Inserer un nouveu mesure</RouterLink>
         </p>
         <table class="table table-striped">
             <thead>

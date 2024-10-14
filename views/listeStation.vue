@@ -1,7 +1,7 @@
 <template>
     <div class="card-body">
         <p>
-            <a class="btn btn-gradient-primary btn-sm">Inserer un nouveu station</a>
+            <RouterLink to="insert-station" class="btn btn-gradient-primary btn-sm">Inserer un nouveu station</RouterLink>
         </p>
         <table class="table table-striped">
             <thead>

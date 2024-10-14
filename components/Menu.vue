@@ -40,10 +40,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../pages/icons/mdi.html">
-                        <span class="menu-title">Parametre</span>
+                    <RouterLink to="parametre-station" class="nav-link">
+                        <span class="menu-title">Station</span>
                         <i class="mdi mdi-contacts menu-icon"></i>
-                    </a>
+                    </RouterLink>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../../pages/forms/basic_elements.html">
@@ -74,8 +74,6 @@
 </template>
   
 <script>
-    // import '@fortawesome/fontawesome-free/css/all.css';
-    // import '@fortawesome/fontawesome-free/js/all.js';
     import '@mdi/font/css/materialdesignicons.min.css';
   
     export default {

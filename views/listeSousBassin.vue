@@ -1,7 +1,7 @@
 <template>
     <div class="card-body">
         <p>
-            <button type="button" class="btn btn-gradient-primary btn-sm">Inserer un nouveau sous bassin</button>
+            <RouterLink to="insert-sous-bassin" class="btn btn-gradient-primary btn-sm">Inserer un nouveu sous bassin</RouterLink>
         </p>
         <table class="table table-striped">
             <thead>
