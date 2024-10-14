@@ -19,7 +19,6 @@
                                         <tr>
                                             <th> Station </th>
                                             <th> Condition </th>
-                                            <th> Formule </th>
                                             <th> Formule final </th>
                                             <th> Action </th>
                                         </tr>
@@ -28,7 +27,6 @@
                                         <tr v-for="formule in paginatedData" :key="formule.idformule">
                                             <td class="py-1"> {{ formule.station }}</td>
                                             <td> {{ "si hauteur <= "+ formule.condition }} </td>
-                                            <td> {{ formule.formule }} </td>
                                             <td> {{ formule.formulefinal }} </td>
                                             <td> 
                                                 <!-- <RouterLink :to="{ name: 'modificationMesure', params: { idmesure: mesure.idmesure } }">
