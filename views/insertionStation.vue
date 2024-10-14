@@ -10,14 +10,14 @@
                     </div>
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">
-                            <div v-if="errorMessage" class="alert alert-danger" style="margin-left: 50px;color: red;">
-                                {{ errorMessage }}
-                            </div>
-                            <div v-if="successMessage" class="alert alert-success" style="margin-left: 50px;color: greenyellow;">
-                                {{ successMessage }}
-                            </div>
                             <div class="card">
                                 <div class="card-body">
+                                    <div v-if="errorMessage"  style="margin-left: 50px;color: red;">
+                                        {{ errorMessage }}
+                                    </div>
+                                    <div v-if="successMessage" style="margin-left: 50px;color: greenyellow;">
+                                        {{ successMessage }}
+                                    </div>
                                     <form @submit.prevent="submitForm" class="forms-sample">
                                         <div class="form-group">
                                             <label for="site">Site</label>
@@ -34,7 +34,7 @@
                                             <label for="idmesure">Mesure</label>
                                             <select v-model="station.idmesure" class="form-control" id="idmesure" required>
                                                 <option value="">Choisir une mesure</option>
-                                                <option v-for="mesure in mesures" :key="mesure.idmesure" :value="mesure.id">{{ mesure.mesure }}</option>
+                                                <option v-for="mesure in mesures" :key="mesure.idmesure" :value="mesure.idmesure">{{ mesure.mesure }}</option>
                                             </select>
                                         </div>
                                         <div class="form-group">
@@ -96,7 +96,6 @@ export default {
                 const response = await axios.post('http://localhost:8000/createStation/', this.station);
                 this.successMessage = response.data.message;
                 this.errorMessage = '';
-                // Réinitialiser le formulaire après la soumission
                 this.resetForm();
             } catch (error) {
                 if (error.response) {
