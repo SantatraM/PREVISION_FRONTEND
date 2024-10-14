@@ -34,10 +34,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link">
+                    <RouterLink to="list-formule" class="nav-link">
                         <span class="menu-title">Formule</span>
-                        <i class="mdi mdi-crosshairs-gps menu-icon"></i>
-                    </a>
+                        <i class="mdi mdi-contacts menu-icon"></i>
+                    </RouterLink>
                 </li>
                 <li class="nav-item">
                     <RouterLink to="parametre-station" class="nav-link">

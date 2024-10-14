@@ -7,12 +7,7 @@
                 <div class="content-wrapper">
                     <div class="page-header">
                         <h3 class="page-title"> Inserer un formule </h3>
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="#">Forms</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Form elements</li>
-                            </ol>
-                        </nav>
+                        <button @click="goBack" class="btn btn-gradient-primary btn-sm">Retour</button>
                     </div>
                     <div class="row">
                         <div class="col-12 grid-margin stretch-card">
@@ -54,6 +49,11 @@
             name: 'insertionFormule',
             components: {
                 Menu,
+            },
+            methods: {
+                goBack() {
+                    this.$router.go(-1);
+                },
             }
         };
     </script>
